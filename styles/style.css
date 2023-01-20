@@ -144,6 +144,10 @@ button:hover {
   width: 2.75rem;
 }
 
+#menuIcon:hover {
+  cursor: pointer;
+}
+
 .menu {
   display: none;
 }
