@@ -283,10 +283,21 @@ button:hover {
 /* Media query for desktops */
 
 @media screen and (min-width: 60em) {
+  header {
+    padding: 5.5rem 9rem 4rem 9rem;
+  }
+
+  .logo {
+    width: 4rem;
+  }
+
   .news {
     grid-template-areas:
       "one two"
       "three three";
+    padding: 0 9rem 5.5rem 9rem;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 1.75rem;
   }
 
   .main__article {
@@ -295,6 +306,10 @@ button:hover {
 
   .new__articles {
     grid-area: two;
+  }
+
+  .new__articles h2 {
+    font-size: 2.5rem;
   }
 
   .top__articles {
@@ -306,20 +321,19 @@ button:hover {
       "one one"
       "two three"
       "two four";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4fr 1fr;
-    column-gap: 3rem;
+      grid-template-columns: 1fr 1.2fr;
   }
 
   .main_grid_element:nth-child(1) {
     grid-area: one;
     width: 100%;
-    
   }
 
   .main_grid_element:nth-child(2) {
     grid-area: two;
     place-self: start;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
 
   .main_grid_element:nth-child(3) {
@@ -341,6 +355,11 @@ button:hover {
   .top_grid {
     gap: 0;
     grid-template-columns: 1fr 2fr;
+    flex: 1;
+  }
+
+  .top_grid_element:nth-child(1) {
+    place-self: center start;
   }
 
   .top_grid p {
