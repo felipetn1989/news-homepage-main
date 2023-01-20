@@ -106,6 +106,42 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--Very-dark-blue);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--Dark-grayish-blue);
+}
+
+button {
+  width: 50%;
+  border: none;
+  text-transform: uppercase;
+  color: var(--Off-white);
+  background-color: var(--Soft-red);
+  letter-spacing: 0.1875rem;
+  padding: 0.8125rem;
+  font-size: 0.8125rem;
+  font-weight: var(--fw-bold);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--Very-dark-blue);
+}
+
+.logo {
+  width: 2.75rem;
 }
 
 .menu {
@@ -114,7 +150,99 @@ header {
 
 .news {
   display: grid;
-  gap: 2.5rem;
+  gap: 3.25rem;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.main__article {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.main__article h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: var(--fw-extraBold);
+}
+
+.new__articles {
+  display: grid;
+  gap: 0.5rem;
+  background-color: var(--Very-dark-blue);
+  padding: 1rem 1.25rem;
+}
+
+.new__articles h2 {
+  font-size: 1.75rem;
+  color: var(--Soft-orange);
+}
+
+.new__articles h3 {
+  color: var(--Off-white);
+  margin-top: 1.5rem;
+}
+
+.new__articles > h3.border_lines {
+  border-top: 1px solid hsla(233, 8%, 79%, 0.308);
+  padding-top: 1.75rem;
+}
+
+.new__articles > p.border_lines {
+  border-bottom: 1px solid hsla(233, 8%, 79%, 0.308);
+  padding-bottom: 1.75rem;
+}
+
+.new_grid_element:last-child {
+  padding-bottom: 1rem;
+}
+
+.top__articles {
+  display: grid;
+  gap: 2rem;
+}
+
+.top_grid {
+  display: grid;
+  grid-template-areas:
+    "one two"
+    "one three"
+    "one four";
+  column-gap: 1rem;
+}
+
+.top_grid img {
+  width: 6rem;
+}
+
+.order {
+  color: var(--Grayish-blue);
+  font-size: 1.75rem;
+  font-weight: var(--fw-extraBold);
+}
+
+.top_grid h2 {
+  font-size: 1.125rem;
+  font-weight: var(--fw-extraBold);
+}
+
+.top_grid p {
+  width: 90%;
+}
+
+.top_grid_element:nth-child(1) {
+  grid-area: one;
+}
+
+.top_grid_element:nth-child(2) {
+  grid-area: two;
+}
+
+.top_grid_element:nth-child(3) {
+  grid-area: three;
+}
+
+.top_grid_element:nth-child(4) {
+  grid-area: four;
 }
 
 .attribution {
