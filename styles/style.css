@@ -283,4 +283,67 @@ button:hover {
 /* Media query for desktops */
 
 @media screen and (min-width: 60em) {
+  .news {
+    grid-template-areas:
+      "one two"
+      "three three";
+  }
+
+  .main__article {
+    grid-area: one;
+  }
+
+  .new__articles {
+    grid-area: two;
+  }
+
+  .top__articles {
+    grid-area: three;
+  }
+
+  .main__article {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "two four";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    column-gap: 3rem;
+  }
+
+  .main_grid_element:nth-child(1) {
+    grid-area: one;
+    width: 100%;
+    
+  }
+
+  .main_grid_element:nth-child(2) {
+    grid-area: two;
+    place-self: start;
+  }
+
+  .main_grid_element:nth-child(3) {
+    grid-area: three;
+    text-align: left;
+    place-self: start;
+  }
+
+  .main_grid_element:nth-child(4) {
+    grid-area: four;
+    place-self: start start;
+  }
+
+  .top__articles {
+    display: flex;
+    align-items: center;
+  }
+
+  .top_grid {
+    gap: 0;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .top_grid p {
+    width: 100%;
+  }
 }
