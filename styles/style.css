@@ -294,18 +294,38 @@ button:hover {
 
 @media screen and (min-width: 60em) {
   header {
-    padding: 5.5rem 9rem 4rem 9rem;
+    padding: 5.5rem 10rem 4rem 10rem;
   }
 
   .logo {
     width: 4rem;
   }
 
+  .menu {
+    display: flex;
+    gap: 2.75rem;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    font-weight: var(--fw-regular);
+  }
+
+  .menu a:hover {
+    cursor: pointer;
+    color: var(--Soft-red);
+  }
+
+  #menuIcon {
+    display: none;
+  }
+
   .news {
     grid-template-areas:
       "one two"
       "three three";
-    padding: 0 9rem 5.5rem 9rem;
+    padding: 0 10rem 5.5rem 10rem;
     grid-template-columns: 2fr 1fr;
     column-gap: 1.75rem;
   }
