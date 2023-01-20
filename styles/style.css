@@ -157,6 +157,7 @@ button:hover {
 .main__article {
   display: grid;
   gap: 1.5rem;
+  place-items: center;
 }
 
 .main__article h1 {
@@ -208,6 +209,7 @@ button:hover {
     "one three"
     "one four";
   column-gap: 1rem;
+  grid-template-columns: 1fr 2.5fr;
 }
 
 .top_grid img {
@@ -231,18 +233,22 @@ button:hover {
 
 .top_grid_element:nth-child(1) {
   grid-area: one;
+  place-self: center center;
 }
 
 .top_grid_element:nth-child(2) {
   grid-area: two;
+  place-self: center start;
 }
 
 .top_grid_element:nth-child(3) {
   grid-area: three;
+  place-self: center start;
 }
 
 .top_grid_element:nth-child(4) {
   grid-area: four;
+  place-self: center start;
 }
 
 .attribution {
@@ -252,4 +258,29 @@ button:hover {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media query for tablets */
+
+@media screen and (min-width: 40em) {
+  header {
+    padding: 3rem 4rem;
+  }
+
+  .news {
+    padding: 1rem 4rem;
+  }
+
+  .main__article p {
+    text-align: center;
+  }
+
+  .top_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Media query for desktops */
+
+@media screen and (min-width: 60em) {
 }
