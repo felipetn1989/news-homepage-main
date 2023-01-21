@@ -403,6 +403,7 @@ button:hover {
   .main_grid_element:nth-child(1) {
     grid-area: one;
     width: 100%;
+    place-self: start center;
   }
 
   .main_grid_element:nth-child(2) {
