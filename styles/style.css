@@ -109,6 +109,16 @@ header {
   position: relative;
 }
 
+.overlay {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.37);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 h1,
 h2,
 h3 {
@@ -145,7 +155,7 @@ button:hover {
 }
 
 #menuIcon {
-  z-index: 2;
+  z-index: 1;
 }
 
 #menuIcon:hover {
@@ -163,7 +173,7 @@ button:hover {
   width: 60%;
   height: 100vh;
   padding: 8rem 1.5rem;
-  z-index: 1;
+  z-index: 0;
 }
 
 .menu a {
@@ -331,7 +341,12 @@ button:hover {
     width: 4rem;
   }
 
+  .overlay {
+    display: none !important;
+  }
+
   .menu {
+    display: flex !important;
     flex-direction: row;
     gap: 2.75rem;
     position: unset;
@@ -349,7 +364,7 @@ button:hover {
   .menu a {
     color: var(--Dark-grayish-blue);
     font-weight: var(--fw-regular);
-    font-size: .9375rem;
+    font-size: 0.9375rem;
   }
 
   .news {
