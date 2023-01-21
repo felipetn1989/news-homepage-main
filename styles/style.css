@@ -96,7 +96,6 @@ h6 {
 }
 
 /* General Settings */
-
 body {
   font-family: var(--ff-regular);
   font-size: 0.9375rem;
@@ -107,6 +106,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 1rem 1rem 1rem;
+  position: relative;
 }
 
 h1,
@@ -144,12 +144,38 @@ button:hover {
   width: 2.75rem;
 }
 
+#menuIcon {
+  z-index: 2;
+}
+
 #menuIcon:hover {
   cursor: pointer;
 }
 
 .menu {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
   display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 60%;
+  height: 100vh;
+  padding: 8rem 1.5rem;
+  z-index: 1;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--Very-dark-blue);
+  font-weight: var(--fw-regular);
+  font-size: 1.125rem;
+}
+
+.menu a:hover {
+  cursor: pointer;
+  color: var(--Soft-red);
 }
 
 .news {
@@ -306,23 +332,24 @@ button:hover {
   }
 
   .menu {
-    display: flex;
+    flex-direction: row;
     gap: 2.75rem;
-  }
-
-  .menu a {
-    text-decoration: none;
-    color: var(--Dark-grayish-blue);
-    font-weight: var(--fw-regular);
-  }
-
-  .menu a:hover {
-    cursor: pointer;
-    color: var(--Soft-red);
+    position: unset;
+    top: unset;
+    right: unset;
+    width: unset;
+    height: unset;
+    padding: unset;
   }
 
   #menuIcon {
     display: none;
+  }
+
+  .menu a {
+    color: var(--Dark-grayish-blue);
+    font-weight: var(--fw-regular);
+    font-size: .9375rem;
   }
 
   .news {
@@ -355,7 +382,7 @@ button:hover {
       "one one"
       "two three"
       "two four";
-      grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1.2fr;
   }
 
   .main_grid_element:nth-child(1) {
